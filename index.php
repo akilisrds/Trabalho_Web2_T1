@@ -31,6 +31,8 @@ require_once 'Classes/Estrutura.php';
     }
     if (isset($_GET['resultado'])) {
         $iValorResultado = $oCalculador->calcular($oArmazem, $oArmazem->getValorAnterior(), $oArmazem->getNumeroTotal());
+        $oArmazem->zeraNumeroTotal();
+        $oArmazem->setNumeroTotal($iValorResultado);
         $oArmazem->setValorAtual($iValorResultado);
     }
 ?>
