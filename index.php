@@ -8,7 +8,7 @@ require_once 'Classes/Estrutura.php';
     $oCalculador = new Calculador();
     
     $oArmazem->setValorAtual('');
-    if (isset($_GET['Voltar'])){
+    if (isset($_GET['limpar'])){
         session_destroy();
         header('Location="index.php"');
     }
@@ -90,7 +90,7 @@ require_once 'Classes/Estrutura.php';
                 <input type="submit" name="num[]" value="0">
             </td>
             <td>
-                <input type="submit" name="num[]" value="C">
+                <input type="submit" name="limpar" value="C">
             </td>
             <td>
                 <input type="submit" name="resultado" value="=">
@@ -100,7 +100,5 @@ require_once 'Classes/Estrutura.php';
             </td>
         </tr>
     </table>
-        <hr>
-        <input type="submit" name="Voltar" value="Voltar" />
     </form>
 </fieldset>
