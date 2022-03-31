@@ -7,6 +7,7 @@ require_once 'Classes/Estrutura.php';
     
     $oCalculador = new Calculador();
     
+    $oEstrutura = new Estrutura();
     $oArmazem->setValorAtual('');
     if (isset($_GET['limpar'])){
         session_destroy();
@@ -37,70 +38,68 @@ require_once 'Classes/Estrutura.php';
     }
 ?>
 
-<fieldset>
-    <form action="" method="get">
-    <table>
+<form action="" method="get">       
+    <table style="border: 10px;border-color: black">
+<tr>
+    <td colspan="4">
+        <input type="text" name="calc" value="<?=$oArmazem->getValorAtual()?>" />
+    </td>
+</tr>
     <tr>
-        <td colspan="4">
-            <input type="text" name="calc" value="<?=$oArmazem->getValorAtual()?>" />
+        <td>
+            <input type="submit" name="num[]" value="7">
+        </td>
+        <td>
+            <input type="submit" name="num[]" value="8">
+        </td>
+        <td>
+            <input type="submit" name="num[]" value="9">
+        </td>
+        <td>
+            <input type="submit" name="op" value="/" />
         </td>
     </tr>
-        <tr>
-            <td>
-                <input type="submit" name="num[]" value="7">
-            </td>
-            <td>
-                <input type="submit" name="num[]" value="8">
-            </td>
-            <td>
-                <input type="submit" name="num[]" value="9">
-            </td>
-            <td>
-                <input type="submit" name="op" value="%" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="submit" name="num[]" value="4">
-            </td>
-            <td>
-                <input type="submit" name="num[]" value="5">
-            </td>
-            <td>
-                <input type="submit" name="num[]" value="6">
-            </td>
-            <td>
-                <input type="submit" name="op" value="X" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="submit" name="num[]" value="1">
-            </td>
-            <td>
-                <input type="submit" name="num[]" value="2">
-            </td>
-            <td>
-                <input type="submit" name="num[]" value="3">
-            </td>
-            <td>
-                <input type="submit" name="op" value="-" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="submit" name="num[]" value="0">
-            </td>
-            <td>
-                <input type="submit" name="limpar" value="C">
-            </td>
-            <td>
-                <input type="submit" name="resultado" value="=">
-            </td>
-            <td>
-                <input type="submit" name="op" value="+" />
-            </td>
-        </tr>
-    </table>
-    </form>
-</fieldset>
+    <tr>
+        <td>
+            <input type="submit" name="num[]" value="4">
+        </td>
+        <td>
+            <input type="submit" name="num[]" value="5">
+        </td>
+        <td>
+            <input type="submit" name="num[]" value="6">
+        </td>
+        <td>
+            <input type="submit" name="op" value="X" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" name="num[]" value="1">
+        </td>
+        <td>
+            <input type="submit" name="num[]" value="2">
+        </td>
+        <td>
+            <input type="submit" name="num[]" value="3">
+        </td>
+        <td>
+            <input type="submit" name="op" value="-" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" name="num[]" value="0">
+        </td>
+        <td>
+            <input type="submit" name="limpar" value="C">
+        </td>
+        <td>
+            <input type="submit" name="resultado" value="=">
+        </td>
+        <td>
+            <input type="submit" name="op" value="+" />
+        </td>
+    </tr>
+</table>
+</form>

@@ -20,7 +20,7 @@ class Calculador {
                 $iValor = $iValor1 + $iValor2;
                 return $iValor;
                 break;
-            case '%':
+            case '/':
                 $iValor = $iValor1 / $iValor2;
                 return $iValor;
                 break;
